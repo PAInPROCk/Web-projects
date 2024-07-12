@@ -1,0 +1,157 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ECF0F1; /* Light Grey */
+    color: #2C3E50; /* Dark Slate Blue */
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 10px;
+    background-image: linear-gradient(-180deg, #052b5d, #CAF0F8);
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+section {
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #2C3E50; /* Dark Slate Blue */
+}
+
+/* Bio and work section styling */
+#bio, #work {
+    background-color: #e9e9e9; /* Light Grey */
+    background-image: linear-gradient(-200deg, #90E0EF, #CAF0F8); /* Soft Sky Blue Gradient */
+    padding: 15px;
+}
+
+#work {
+    background-image: linear-gradient(-180deg, #FFFFFF, rgb(203, 243, 240)); /* White to Soft Blue */
+}
+
+#skills{
+    background-image: linear-gradient(-360deg, #1e5fb5, #CAF0F8);
+
+}
+
+li{
+    color: #0F0F0E;
+}
+
+
+.project {
+    width: 300px;
+    height: 220px;
+    border: 1px solid #95A5A6; 
+    margin: 2px;
+    display: inline-block;
+    text-align: bottom;
+    line-height: 50px;
+}
+
+.navbar {
+    background-color: #BEFF39; 
+    border-radius: 20px;
+}
+
+.navbar ul {
+    overflow: auto;
+}
+
+.navbar li {
+    float: left;
+    list-style: none;
+    margin: 13px 20px;
+}
+
+.navbar li a {
+    padding: 3px 3px;
+    text-decoration: none;
+    color: #2C3E50; 
+}
+
+.navbar ul li a:hover {
+    background-color: #f8faf6;
+    border-radius: 20px;
+}
+
+
+button {
+    background: #FBCA1F; 
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid #2C3E50; 
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}
+
+
+a {
+    text-decoration: none;
+    color: #2C3E50;
+    font-size: 20px;
+}
+
+.footer-link {
+    color: #FBCA1F; 
+}
+
+
+footer {
+    background-color: #2F3C4F; 
+    color: #FFFFFF; 
+    text-align: center;
+    padding: 10px;
+}
+
+.contact, .instagram, .linked {
+    position: relative;
+    bottom: -3px;
+    text-decoration: none;
+    color: #FBCA1F; 
+}
+
+.contact{
+    position: relative;
+    bottom: -3px;
+    text-decoration: none;
+    color: #FBCA1F;
+    height: 20px;
+}
+
+.instagram {
+    height: 25px;
+    width: 25px;
+}
+
+.linked_in {
+    height: 25px;
+    width: 25px;
+}
+
+strong{
+    color: #0F0F0E;
+}
+
