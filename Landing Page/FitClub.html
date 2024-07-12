@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitClub - The best fitness gym in the town</title>
+    <link rel="Stylesheet" href="FitClub.css">
+    <script src="timer.js"></script>
+    <link rel="Stylesheet" href="utils.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap">
+</head>
+<body class="overflow-x">
+    <div class="container mx-auto ">
+        <header>
+              <nav class="flex justify-between">
+                <div class="logo font-bold flex items-center text blue">FitClub</div>
+                <ul class="navbar flex items-center">
+                    <li><a onclick="Home()">Home</a></li>
+                    <li><a onclick="Home()">About</a></li>
+                    <li><a href="https://www.linkedin.com/in/prathmesh-bhadwalkar-1967442b2/">Services</a></li>
+                    <li><a onclick="con()">Contact Us</a></li>
+                    <li><button class="btn"><a href="https://www.instagram.com/prathmeshbhadwalkar">Join Now</a></button></li>
+                </ul>
+              </nav>  
+              <hr>
+        </header>
+        <main class="min-h-screen ">
+            <section class="section1">
+                <div class="flex">
+                    <div class="topleft flex flex-col justify-center px-2">
+                        <div class="text-center">
+                            <img class="dumbelling" src="dumbell.png" alt="">
+                        </div>
+                        <h1 class="my-1 text-center"> The best fitness Gym in the town is here</h1>
+                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur cum blanditiis aut ab, atque praesentium recusandae perspiciatis delectus aperiam quo quasi, corporis, cumque iusto. Delectus necessitatibus id beatae illo architecto!</p> 
+                        <p class="deal text-center">The deal ends in <span id="demo"></span></p>
+                        <div class="buttons">
+                            <button class="btn">Join Now</button>
+                            <button class="btn">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="topright flex justify-center">
+                        <img class="gyming" src="gym - Copy.jpg" alt="">
+                    </div>
+                </div>        
+            </section>
+            <hr>
+            <section class="section2">
+                <h1 class="text-center my-2">Pricing</h1>
+                <p class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus sint perferendis alias neque modi nam fugit qui enim sunt fuga aliquam soluta rerum, exercitationem vero et asperiores quis provident culpa.</p>
+                <div class="boxes flex justify-cneter">
+                    <div class="box">
+                        <h2>Free</h2>
+                        <ul>
+                            <li class="highlighted">₹0/month</li>
+                            <li>0 users included</li>
+                            <li>2 GB of storage</li>
+                            <li>Email Support</li>
+                            <li>Help center access</li>
+                            <li><button class="btn">SignUp Now</button></li>
+                        </ul>
+                    </div>
+                <div class="box">
+                    <h2>Pro</h2>
+                    <ul>
+                        <li class="highlithed">₹150/month</li>
+                        <li>0 users included</li>
+                        <li>2 GB of storage</li>
+                        <li>Email Support</li>
+                        <li>Help center access</li>
+                        <li><button class="btn">SignUp Now</button></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h2>Enterprise</h2>
+                    <ul>
+                        <li class="highlighted">₹500/month</li>
+                        <li>0 users included</li>
+                        <li>2 GB of storage</li>
+                        <li>Email Support</li>
+                        <li>Help Center access</li>
+                        <li><button class="btn">SignUp Now</button></li>
+                    </ul>
+                </div>
+                </div>
+            </section>
+            <hr>
+            <section class="section3">
+                <h1 class="text-center my-2">Compare Plans</h1>
+                <div class="container plantable">
+                    <table class="table text-center">
+                        <thead>
+                            <tr>
+                                <th></th><th><span>Free</span></th>
+                                <th><span>Pro</span></th>
+                                <th><span>Enterprise</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="text-start">Public</th>
+                                <td>Yes</svg></td>
+                                <td>Yes</svg></td>
+                                <td>Yes</svg></td>
+                            </tr>
+                            <tr> 
+                                <th scope="row" class="text-start">Private</th>
+                                <td>Yes</svg></td>
+                                <td>Yes</svg></td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="text-start">Permissions</th>
+                                <td>Yes</svg></td>
+                                <td>Yes</svg></td>
+                                <td>Yes</svg></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-start">Sharing</th>
+                                <td></td>
+                                <td>Yes</svg></td>
+                                <td>Yes</svg></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-start">Unlimited members</th>
+                                <td></td>
+                                <td>Yes</svg></td>
+                                <td>Yes</svg></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-start">Extra Security</th>
+                                <td></td>
+                                <td></td>
+                                <td>Yes</svg></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+            <hr>
+        </main>
+        <footer>
+            Copyright &copy; FitClub.com | All rights reserved
+        </footer>
+    </div>
+    <script>
+        function Home(){
+            window.location.href="../index.html";
+        }
+
+        function con(){
+            window.location.href="../Contact/contact.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Calculator.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a onclick="Home()">Home</a></li>
+            <li><a onclick="Res()">My Resources</a></li>
+            <li><a onclick="Edu()">Education</a></li>
+            <li><a onclick="Con()">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="real" id="calculator">
+        <div class="main">
+            <h1>Calculator</h1>
+            <div class="ans">
+                    <div class="res" id="display">00
+                    </div>
+                    <div class="res" id="display2"></div>  <!-- added second display to adjust decimal numbers more than 10 or more --> 
+            </div>
+    
+            <input class="b1" type="number" id="num1" placeholder="00"><br>
+            <input class="b2" type="number" id="num2" placeholder="00">
+            <button class="c" type="button" onclick="clr()">C</button>
+                
+              <button class="ad" type="button" onclick="add()" onclick="addpng()">+</button>
+              <button type="button" onclick="subt()" onclick="subpng()">-</button>
+              <button type="button" onclick="Multi()" onclick="mulpng()">x</button>
+              <button type="button" onclick="Div()" onclick="divpng()">/</button>
+              <button type="button" onclick="one()">1</button>
+              <button type="button" onclick="two()">2</button>
+              <button type="button" onclick="three()">3</button>
+              <button type="button" onclick="per()">%</button>
+              <button type="button" onclick="four()">4</button>
+              <button type="button" onclick="five()">5</button>
+              <button type="button" onclick="six()">6</button>
+              <button type="button" onclick="sr()">&#8730</button>
+              <button type="button" onclick="seven()">7</button>
+              <button type="button" onclick="eight()">8</button>
+              <button type="button" onclick="nine()">9</button>
+               <br>
+            
+        </div>
+        <div class="details">
+            <P align="center">STUDENT NAME: PRATHAMESH PRAMOD BHADWALKAR</P>
+            <p align="center">COURSE: G-TECH</p>
+            <p align="center">SOFTWARE: HTML 5, CSS, JAVASCRIPT, VS CODE</p>
+            <a href="mailto:2601prathmeshbhadwalkar@gmail.com" target="_blank">
+                <img src="gmail.svg">
+            </a>
+            <a class="insta" href="https://www.instagram.com/prathmeshbhadwalkar" target="_blank">
+                <img class="insta" src="instagram (1).svg">
+            </a>
+        </div>
+    </div>
+    
+    <!-- <div class="info">I</div> -->
+    <audio id="clear" src="mixkit-air-woosh-1489.wav"></audio>
+    <script>
+        var a,b,c,v,d;
+        a=document.getElementById("num1");
+        b=document.getElementById("num2");
+        var calculator=document.getElementById("calculator");
+
+        function add(){
+            c=parseFloat(a.value)+parseFloat(b.value);
+            var disp=""+c;
+            document.getElementById("display").innerHTML=disp;
+            calculator.style.backgroundImage = "url('add.png')";
+            adjustFontSize();
+            handleResult(c);
+        }
+
+        function subt(){
+            c=parseFloat(a.value)-parseFloat(b.value);
+            var disp=""+c;
+            document.getElementById("display").innerHTML=disp;
+            adjustFontSize();
+            handleResult(c);
+        }
+
+        function Multi(){
+            c=parseFloat(a.value)*parseFloat(b.value);
+            var disp=""+c;
+            document.getElementById("display").innerHTML=disp;
+            adjustFontSize();
+            handleResult(c);
+        }
+
+        function Div(){
+            c=parseFloat(a.value) / parseFloat(b.value);
+            var disp=""+c;
+            document.getElementById("display").innerHTML=disp;
+            adjustFontSize();
+            handleResult(c);
+        }
+        
+        function clr(){
+            document.getElementById("num2").value="";
+            document.getElementById("num1").value="";
+            document.getElementById("display").innerText = "Cleared";
+            document.getElementById("display2").innerText = "";
+            document.getElementById("clear").play();
+            document.getElementById("calculato").innerHTML = "";
+        }
+
+        function one(){
+            document.getElementById("num1").value="1";
+        }
+
+        function two(){
+            document.getElementById("num1").value="2";
+        }
+
+        function three(){
+            document.getElementById("num1").value="3";
+        }
+
+        function four(){
+            document.getElementById("num1").value="4";
+        }
+
+        function five(){
+            document.getElementById("num1").value="5";
+        }
+
+        function six(){
+            document.getElementById("num1").value="6";
+        }
+
+        function seven(){
+            document.getElementById("num1").value="7";
+        }
+
+        function eight(){
+            document.getElementById("num1").value="8";
+        }
+
+        function nine(){
+            document.getElementById("num1").value="9";
+            adjustFontSize();
+        }
+
+        function per(){
+            c=parseFloat(a.value)*parseFloat(b.value)/100;
+            var disp=""+c;
+            document.getElementById("display").innerHTML=disp;
+            adjustFontSize();
+            handleResult(c);
+        }
+
+        function sr(){
+    if (parseFloat(a.value) < 0) {
+        updateDisplay("Error: Invalid square root");
+        return;
+    }
+    c = Math.sqrt(parseFloat(a.value));
+    var disp=""+c;
+    document.getElementById("display").innerHTML=disp;
+    adjustFontSize();
+    handleResult(c);
+}
+
+function adjustFontSize() {
+            var display = document.getElementById("display");
+            var length = display.innerHTML.length;
+            handleResult(c);
+            if (length > 10) {
+                display.style.fontSize = "20px"; // Adjust to a smaller font size
+            } 
+            
+            else if(length>15){
+                display.style.fontSize = "20px";
+            }
+
+            else {
+                display.style.fontSize = "22px"; // Default font size
+            }
+        }
+
+        function handleResult(result) {
+            var disp = result.toString();
+            if (disp.length > 15) {
+                document.getElementById("display").innerHTML = disp.slice(0, 15); // This function will automatically divide the result into two parts if numbers are greater than 15.
+                document.getElementById("display2").innerHTML = disp.slice(15);  // After dividing the numbers the numbers after 15th position will be displayed in 2nd display.
+            } else {
+                document.getElementById("display").innerHTML = disp;
+                document.getElementById("display2").innerHTML = "";
+            }
+            adjustFontSize();
+        }
+
+
+        function mulpng(){
+            document.getElementById("calculator").innerHTML.backgroundImage = "url('mul.png')";
+            if(document.getElementById("calculator").innerHTML.backgroundImage = "url('add.png')","url('sub.png')","url('div.png')"){
+                document.getElementById("calculator").innerHTML.backgroundImage = "";
+            }
+
+        }
+
+        function addpng(){
+            document.getElementById("calculator").innerHTML.backgroundImage = "url('add.png')";
+        }
+
+        function Home(){
+            window.location.href="../index.html";
+        }
+
+        function Con(){
+            window.location.href="../Contact/contact.html";
+        }
+
+        function Edu(){
+            window.location.href="../Education/education.html";
+        }
+
+        function Res(){
+            window.location.href="../Resources/resources.html";
+        }
+    
+    </script>
+</body>
+</html>

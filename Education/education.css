@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ced0d0; 
+    color: #2C3E50;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    flex-wrap: wrap; 
+    padding: 20px;
+}
+
+.education-block {
+    background-image: linear-gradient(-190deg,rgb(4, 86, 153),rgba(241, 218, 10, 0.938));
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 20px;
+    margin: 10px; 
+    text-align: center; 
+    max-width: 250px; 
+}
+
+.education-block1 {
+    background-image: linear-gradient(-190deg,rgb(221, 12, 12),rgb(138, 138, 138),rgb(29, 28, 28));
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 20px;
+    margin: 10px; 
+    text-align: center; 
+    max-width: 250px;
+}
+
+.education-block2 {
+    background-image: linear-gradient(-190deg,rgb(155, 219, 51),rgb(14, 146, 2));
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    padding: 20px;
+    margin: 10px; 
+    text-align: center; 
+    max-width: 250px; 
+}
+
+img {
+    display: block; 
+    margin: 0 auto 10px; 
+}
+
+.web{
+    height: 40px;
+}
+
+.loc{
+    height: 40px;
+}
+
+.atmo{
+    height: 90px;
+    width: 180px;
+}
+
+.navbar {
+    background-color: #BEFF39; 
+    border-radius: 20px;
+}
+
+.navbar ul {
+    overflow: auto;
+}
+
+.navbar li {
+    float: left;
+    list-style: none;
+    margin: 13px 20px;
+}
+
+.navbar li a {
+    padding: 3px 3px;
+    text-decoration: none;
+    color: #2C3E50; 
+}
+
+.navbar ul li a:hover {
+    background-color: #f8faf6;
+    border-radius: 20px;
+}
+
+h2{
+    text-align: center;
+}
